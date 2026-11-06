@@ -1,0 +1,5 @@
+linux-*/
+linux-*.tar.xz
+build-*/
+initramfs/
+initramfs.cpio.gz
