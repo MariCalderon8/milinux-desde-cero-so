@@ -3,3 +3,7 @@ linux-*.tar.xz
 build-*/
 initramfs/
 initramfs.cpio.gz
+
+/rootfs/*
+!/rootfs/init
+/busybox-1.37.0/

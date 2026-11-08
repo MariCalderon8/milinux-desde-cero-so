@@ -1,0 +1,322 @@
+c[?7l[2J[0mSeaBIOS (version 1.16.3-debian-1.16.3-2)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+0EFC6D30+0EF06D30 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM...
+c[?7l[2J
+=== Mi Linux 240220231078: espacio de usuario con BusyBox ===
+Kernel: 6.18.60-equipo240220231078   Procesos: 52
+
+~ # ps
+ps
+ls /proc
+mount -t proc proc /proc
+psPID   USER     TIME  COMMAND
+    1 0         0:03 sh
+    2 0         0:00 [kthreadd]
+    3 0         0:00 [pool_workqueue_]
+    4 0         0:00 [kworker/R-rcu_g]
+    5 0         0:00 [kworker/R-sync_]
+    6 0         0:00 [kworker/R-kvfre]
+    7 0         0:00 [kworker/R-slub_]
+    8 0         0:00 [kworker/R-netns]
+    9 0         0:00 [kworker/0:0-mm_]
+   10 0         0:00 [kworker/0:0H-ev]
+   11 0         0:02 [kworker/u4:0-ev]
+   12 0         0:00 [kworker/0:1-ata]
+   13 0         0:00 [kworker/R-mm_pe]
+   14 0         0:00 [ksoftirqd/0]
+   15 0         0:00 [rcu_preempt]
+   16 0         0:00 [rcu_exp_par_gp_]
+   17 0         0:00 [rcu_exp_gp_kthr]
+   18 0         0:00 [migration/0]
+   19 0         0:00 [cpuhp/0]
+   20 0         0:00 [kdevtmpfs]
+   21 0         0:00 [kworker/R-inet_]
+   22 0         0:00 [rcu_tasks_kthre]
+   23 0         0:00 [rcu_tasks_trace]
+   24 0         0:00 [kauditd]
+   25 0         0:00 [kworker/u4:1-kv]
+   26 0         0:00 [oom_reaper]
+   27 0         0:00 [kworker/R-write]
+   28 0         0:00 [kcompactd0]
+   29 0         0:00 [kworker/R-kbloc]
+   30 0         0:00 [irq/9-acpi]
+   31 0         0:00 [kworker/R-ata_s]
+   32 0         0:00 [kworker/R-md_bi]
+   33 0         0:00 [kworker/u4:2-sc]
+   34 0         0:00 [kworker/R-quota]
+   35 0         0:00 [kworker/0:1H-kb]
+   36 0         0:00 [kworker/R-rpcio]
+   37 0         0:00 [kworker/R-xprti]
+   38 0         0:00 [kworker/R-cfg80]
+   39 0         0:00 [kswapd0]
+   40 0         0:00 [kworker/R-nfsio]
+   41 0         0:00 [kworker/R-acpi_]
+   42 0         0:00 [scsi_eh_0]
+   43 0         0:00 [kworker/R-scsi_]
+   44 0         0:00 [scsi_eh_1]
+   45 0         0:00 [kworker/R-scsi_]
+   46 0         0:00 [kworker/u4:3]
+   47 0         0:00 [kworker/0:2-pm]
+   48 0         0:00 [kworker/R-mld]
+   49 0         0:00 [kworker/R-ipv6_]
+   61 0         0:00 ps
+~ # umount /proc
+~ # ps
+PID   USER     TIME  COMMAND
+~ # ls /proc
+~ # mount -t proc proc /proc
+~ # ps
+PID   USER     TIME  COMMAND
+    1 0         0:03 sh
+    2 0         0:00 [kthreadd]
+    3 0         0:00 [pool_workqueue_]
+    4 0         0:00 [kworker/R-rcu_g]
+    5 0         0:00 [kworker/R-sync_]
+    6 0         0:00 [kworker/R-kvfre]
+    7 0         0:00 [kworker/R-slub_]
+    8 0         0:00 [kworker/R-netns]
+    9 0         0:00 [kworker/0:0-mm_]
+   10 0         0:00 [kworker/0:0H-ev]
+   11 0         0:02 [kworker/u4:0-ev]
+   12 0         0:00 [kworker/0:1-ata]
+   13 0         0:00 [kworker/R-mm_pe]
+   14 0         0:00 [ksoftirqd/0]
+   15 0         0:00 [rcu_preempt]
+   16 0         0:00 [rcu_exp_par_gp_]
+   17 0         0:00 [rcu_exp_gp_kthr]
+   18 0         0:00 [migration/0]
+   19 0         0:00 [cpuhp/0]
+   20 0         0:00 [kdevtmpfs]
+   21 0         0:00 [kworker/R-inet_]
+   22 0         0:00 [rcu_tasks_kthre]
+   23 0         0:00 [rcu_tasks_trace]
+   24 0         0:00 [kauditd]
+   25 0         0:00 [kworker/u4:1-kv]
+   26 0         0:00 [oom_reaper]
+   27 0         0:00 [kworker/R-write]
+   28 0         0:00 [kcompactd0]
+   29 0         0:00 [kworker/R-kbloc]
+   30 0         0:00 [irq/9-acpi]
+   31 0         0:00 [kworker/R-ata_s]
+   32 0         0:00 [kworker/R-md_bi]
+   33 0         0:00 [kworker/u4:2-sc]
+   34 0         0:00 [kworker/R-quota]
+   35 0         0:00 [kworker/0:1H-kb]
+   36 0         0:00 [kworker/R-rpcio]
+   37 0         0:00 [kworker/R-xprti]
+   38 0         0:00 [kworker/R-cfg80]
+   39 0         0:00 [kswapd0]
+   40 0         0:00 [kworker/R-nfsio]
+   41 0         0:00 [kworker/R-acpi_]
+   42 0         0:00 [scsi_eh_0]
+   43 0         0:00 [kworker/R-scsi_]
+   44 0         0:00 [scsi_eh_1]
+   45 0         0:00 [kworker/R-scsi_]
+   46 0         0:00 [kworker/u4:3]
+   47 0         0:00 [kworker/0:2-pm]
+   48 0         0:00 [kworker/R-mld]
+   49 0         0:00 [kworker/R-ipv6_]
+   66 0         0:00 ps
+~ # cat /proc/1/status | head -12
+uptime
+cat /proc/filesystems
+ls -l /proc/meminfoName:	sh
+Umask:	0022
+State:	S (sleeping)
+Tgid:	1
+Ngid:	0
+Pid:	1
+PPid:	0
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	64
+Groups:	 
+~ # cat /proc/cmdline
+console=ttyS0 quiet
+~ # head -5 /proc/meminfo
+MemTotal:         218228 kB
+MemFree:          204100 kB
+MemAvailable:     200980 kB
+Buffers:               0 kB
+Cached:             2288 kB
+~ # grep -c processor /proc/cpuinfo
+1
+~ # cat /proc/uptime
+146.85 136.83
+~ # cat /proc/filesystems
+nodev	sysfs
+nodev	tmpfs
+nodev	proc
+nodev	cgroup
+nodev	cgroup2
+nodev	devtmpfs
+nodev	binfmt_misc
+nodev	debugfs
+nodev	tracefs
+nodev	sockfs
+nodev	pipefs
+nodev	ramfs
+nodev	hugetlbfs
+nodev	rpc_pipefs
+nodev	devpts
+	ext3
+	ext2
+	ext4
+	vfat
+	msdos
+	iso9660
+nodev	nfs
+nodev	nfs4
+nodev	autofs
+nodev	9p
+nodev	mqueue
+nodev	selinuxfs
+~ # ls -l /proc/meminfo
+-r--r--r--    1 0        0                0 Nov  8 02:12 [0;0m/proc/meminfo[m
+~ # ls /sys/class
+[1;34mata_device[m        [1;34mhidraw[m            [1;34mpci_bus[m           [1;34msound[m
+[1;34mata_link[m          [1;34mhwmon[m             [1;34mpcmcia_socket[m     [1;34mspi_host[m
+[1;34mata_port[m          [1;34mieee80211[m         [1;34mplatform-profile[m  [1;34mspi_transport[m
+[1;34mbacklight[m         [1;34minput[m             [1;34mpower_supply[m      [1;34mthermal[m
+[1;34mbdi[m               [1;34miommu[m             [1;34mpps[m               [1;34mtty[m
+[1;34mblock[m             [1;34mleds[m              [1;34mptp[m               [1;34musbmisc[m
+[1;34mbsg[m               [1;34mmdio_bus[m          [1;34mrfkill[m            [1;34musbmon[m
+[1;34mcpuid[m             [1;34mmei[m               [1;34mrtc[m               [1;34mvc[m
+[1;34mdevlink[m           [1;34mmem[m               [1;34mscsi_device[m       [1;34mvirtio-ports[m
+[1;34mdma[m               [1;34mmisc[m              [1;34mscsi_disk[m         [1;34mvtconsole[m
+[1;34mdmi[m               [1;34mmsr[m               [1;34mscsi_generic[m      [1;34mwakeup[m
+[1;34mdrm[m               [1;34mnet[m               [1;34mscsi_host[m         [1;34mwmi_bus[m
+~ # ls /sys/class/net
+[1;36meth0[m  [1;36mlo[m    [1;36msit0[m
+~ # ls /sys/block
+[1;36mloop0[m  [1;36mloop1[m  [1;36mloop2[m  [1;36mloop3[m  [1;36mloop4[m  [1;36mloop5[m  [1;36mloop6[m  [1;36mloop7[m  [1;36msr0[m
+~ # cat /sys/class/net/eth0/address
+52:54:00:12:34:56
+~ # ls /sys/devices/system/cpu
+[1;34mcpu0[m             [1;34mhotplug[m          [0;0monline[m           [0;0muevent[m
+[1;34mcpufreq[m          [0;0misolated[m         [0;0mpossible[m         [1;34mvulnerabilities[m
+[1;34mcpuidle[m          [0;0mkernel_max[m       [1;34mpower[m
+[0;0mcrash_hotplug[m    [0;0mmodalias[m         [0;0mpresent[m
+[0;0menabled[m          [0;0moffline[m          [1;34msmt[m
+~ # grep VmRSS /proc/1/status
+VmRSS:	    1740 kB
+~ # clear
+[H[J~ # ls -l /dev | head -20
+total 0
+crw-r--r--    1 0        0          10, 235 Nov  8 02:10 autofs
+drwxr-xr-x    2 0        0               60 Nov  8 02:10 bsg
+crw-------    1 0        0           5,   1 Nov  8 02:10 console
+drwxr-xr-x    3 0        0               60 Nov  8 02:10 cpu
+crw-------    1 0        0          10, 257 Nov  8 02:10 cpu_dma_latency
+crw-rw-rw-    1 0        0           1,   7 Nov  8 02:10 full
+crw-------    1 0        0          10, 228 Nov  8 02:10 hpet
+crw-------    1 0        0          10, 183 Nov  8 02:10 hwrng
+drwxr-xr-x    2 0        0              100 Nov  8 02:10 input
+crw-r--r--    1 0        0           1,  11 Nov  8 02:10 kmsg
+crw-------    1 0        0          10, 237 Nov  8 02:10 loop-control
+brw-------    1 0        0           7,   0 Nov  8 02:10 loop0
+brw-------    1 0        0           7,   1 Nov  8 02:10 loop1
+brw-------    1 0        0           7,   2 Nov  8 02:10 loop2
+brw-------    1 0        0           7,   3 Nov  8 02:10 loop3
+brw-------    1 0        0           7,   4 Nov  8 02:10 loop4
+brw-------    1 0        0           7,   5 Nov  8 02:10 loop5
+brw-------    1 0        0           7,   6 Nov  8 02:10 loop6
+brw-------    1 0        0           7,   7 Nov  8 02:10 loop7
+~ # ls /dev | wc -l
+111
+~ # cat /proc/devices
+Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  7 vcs
+ 10 misc
+ 13 input
+ 21 sg
+116 alsa
+128 ptm
+136 pts
+180 usb
+189 usb_device
+202 cpu/msr
+203 cpu/cpuid
+226 drm
+248 hidraw
+249 usbmon
+250 mei
+251 bsg
+252 ptp
+253 pps
+254 rtc
+
+Block devices:
+  7 loop
+  8 sd
+  9 md
+ 11 sr
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd
+252 device-mapper
+253 virtblk
+254 mdp
+259 blkext
+~ # umount -l /dev
+cho "hola desde mi propio dispositivo" > /dev/mi_consola
+ls -l /dev~ # ls -l /dev
+total 0
+crw-------    1 0        0           5,   1 Nov  8 02:10 [1;35mconsole[m
+~ # mknod /dev/null c 1 3
+~ # echo "esto desaparece" > /dev/null
+~ # mknod /dev/mi_consola c 5 1
+~ # echo "hola desde mi propio dispositivo" > /dev/mi_consola
+hola desde mi propio dispositivo
+~ # ls -l /dev
+total 0
+crw-------    1 0        0           5,   1 Nov  8 02:10 [1;35mconsole[m
+crw-r--r--    1 0        0           5,   1 Nov  8 02:22 [1;35mmi_consola[m
+crw-r--r--    1 0        0           1,   3 Nov  8 02:22 [1;35mnull[m
+~ # mount -t devtmpfs devtmpfs /dev
+~ # ls /dev | wc -l
+111
+~ # grep ttyS0 /proc/interrupts
+  4:       2573  IO-APIC   4-edge      ttyS0
+~ # dd if=/dev/zero of=/dev/null bs=1M count=200
+200+0 records in
+200+0 records out
+209715200 bytes (200.0MB) copied, 0.155092 seconds, 1.3GB/s
+~ # dd if=/dev/zero of=/tmp/archivo bs=1M count=20
+20+0 records in
+20+0 records out
+20971520 bytes (20.0MB) copied, 0.304894 seconds, 65.6MB/s
+~ # ls -lh /tmp/archivo
+-rw-r--r--    1 0        0          20.0M Nov  8 02:26 [0;0m/tmp/archivo[m
+~ # head -3 /proc/meminfo
+MemTotal:         218228 kB
+MemFree:          183148 kB
+MemAvailable:     180096 kB
+~ # rm /tmp/archivo
+~ # poweroff -f
+[ 1023.683970] reboot: Power down

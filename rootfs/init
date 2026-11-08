@@ -1,0 +1,20 @@
+#!/bin/sh
+# Este archivo lo ejecuta el shell de BusyBox
+
+# Carpetas donde el sistema busca los comandos
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+mount -t proc     proc     /proc # Muestra la información de los procesos en /proc
+mount -t sysfs    sysfs    /sys  # Muestra los datos del hardware en /sys
+mount -t devtmpfs devtmpfs /dev  # Crea en /dev un archivo por cada dispositivo
+
+# Le pone nombre a mi equipo
+hostname milinux-240220231078
+
+echo
+echo "=== Mi Linux 240220231078: espacio de usuario con BusyBox ==="
+echo "Kernel: $(uname -r)   Procesos: $(ls -d /proc/[0-9]* | wc -l)"  # Muestra la versión del kernel y cuántos procesos hay
+echo
+
+# Cambia el script por la terminal, que hereda el PID 1
+exec setsid cttyhack sh

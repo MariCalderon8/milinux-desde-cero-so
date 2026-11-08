@@ -1,0 +1,104 @@
+c[?7l[2J[0mSeaBIOS (version 1.16.3-debian-1.16.3-2)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+0EFC6D30+0EF06D30 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from ROM...
+c[?7l[2J
+=== Mi Linux 240220231078: espacio de usuario con BusyBox ===
+Kernel: 6.18.60-equipo240220231078   Procesos: 52
+
+~ # echo $$
+1
+~ # ps
+PID   USER     TIME  COMMAND
+    1 0         0:03 sh
+    2 0         0:00 [kthreadd]
+    3 0         0:00 [pool_workqueue_]
+    4 0         0:00 [kworker/R-rcu_g]
+    5 0         0:00 [kworker/R-sync_]
+    6 0         0:00 [kworker/R-kvfre]
+    7 0         0:00 [kworker/R-slub_]
+    8 0         0:00 [kworker/R-netns]
+    9 0         0:00 [kworker/0:0-eve]
+   10 0         0:00 [kworker/0:1-mm_]
+   11 0         0:00 [kworker/0:0H-ev]
+   12 0         0:02 [kworker/u4:0-ev]
+   13 0         0:00 [kworker/R-mm_pe]
+   14 0         0:00 [ksoftirqd/0]
+   15 0         0:00 [rcu_preempt]
+   16 0         0:00 [rcu_exp_par_gp_]
+   17 0         0:00 [rcu_exp_gp_kthr]
+   18 0         0:00 [migration/0]
+   19 0         0:00 [cpuhp/0]
+   20 0         0:00 [kdevtmpfs]
+   21 0         0:00 [kworker/R-inet_]
+   22 0         0:00 [rcu_tasks_kthre]
+   23 0         0:00 [rcu_tasks_trace]
+   24 0         0:00 [kauditd]
+   25 0         0:00 [kworker/u4:1-ev]
+   26 0         0:00 [oom_reaper]
+   27 0         0:00 [kworker/R-write]
+   28 0         0:00 [kcompactd0]
+   29 0         0:00 [kworker/R-kbloc]
+   30 0         0:00 [irq/9-acpi]
+   31 0         0:00 [kworker/R-ata_s]
+   32 0         0:00 [kworker/R-md_bi]
+   33 0         0:00 [kworker/u4:2-sc]
+   34 0         0:00 [kworker/R-quota]
+   35 0         0:00 [kworker/0:1H-kb]
+   36 0         0:00 [kworker/R-rpcio]
+   37 0         0:00 [kworker/R-xprti]
+   38 0         0:00 [kworker/R-cfg80]
+   39 0         0:00 [kswapd0]
+   40 0         0:00 [kworker/R-nfsio]
+   41 0         0:00 [kworker/R-acpi_]
+   42 0         0:00 [scsi_eh_0]
+   43 0         0:00 [kworker/R-scsi_]
+   44 0         0:00 [scsi_eh_1]
+   45 0         0:00 [kworker/R-scsi_]
+   46 0         0:00 [kworker/u4:3]
+   47 0         0:00 [kworker/0:2-pm]
+   48 0         0:00 [kworker/R-mld]
+   49 0         0:00 [kworker/R-ipv6_]
+   61 0         0:00 ps
+~ # mount
+rootfs on / type rootfs (rw,size=106000k,nr_inodes=26500)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=106000k,nr_inodes=26500,mode=755)
+~ # hostname
+milinux-240220231078
+~ # uname -a
+Linux milinux-240220231078 6.18.60-equipo240220231078 #1 SMP PREEMPT_DYNAMIC Mon Nov  2 22:32:17 -05 2026 x86_64 GNU/Linux
+~ # exit
+[   23.877006] Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000
+[   23.886410] CPU: 0 UID: 0 PID: 1 Comm: sh Not tainted 6.18.60-equipo240220231078 #1 PREEMPT(voluntary) 
+[   23.888157] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
+[   23.889474] Call Trace:
+[   23.891362]  <TASK>
+[   23.892639]  dump_stack_lvl+0x4e/0x70
+[   23.895069]  vpanic+0xcf/0x2b0
+[   23.895952]  panic+0x66/0x66
+[   23.896823]  do_exit.cold+0x3b/0x3b
+[   23.898016]  ? tty_release+0x1d7/0x430
+[   23.898325]  do_group_exit+0x2b/0x80
+[   23.898456]  __x64_sys_exit_group+0x13/0x20
+[   23.898679]  x64_sys_call+0x14fa/0x1500
+[   23.898806]  do_syscall_64+0xa4/0x300
+[   23.899476]  entry_SYSCALL_64_after_hwframe+0x77/0x7f
+[   23.900734] RIP: 0033:0x4d9a85
+[   23.902418] Code: ff ff e9 79 ff ff ff e8 89 7e 00 00 48 89 c5 e9 9f 7c f2 ff 90 48 c7 c6 e0 ff ff ff ba e7 00 00 00 eb 03 66 90 f4 89 d0 0f 05 <48> 3d 00 f0 ff ff 76 f3 f7 d8 64 89 06 eb ec 66 2e 0f 1f 84 00 00
+[   23.903996] RSP: 002b:00007ffc4f0e73d8 EFLAGS: 00000202 ORIG_RAX: 00000000000000e7
+[   23.904629] RAX: ffffffffffffffda RBX: 00000000230f5980 RCX: 00000000004d9a85
+[   23.906365] RDX: 00000000000000e7 RSI: ffffffffffffffe0 RDI: 0000000000000000
+[   23.907397] RBP: 0000000000000004 R08: 0000000000000000 R09: 0000000000000000
+[   23.907678] R10: 0000000000000000 R11: 0000000000000202 R12: 00007ffc4f0e7704
+[   23.907910] R13: 0000000000000002 R14: 0000000000000000 R15: 0000000000000002
+[   23.908327]  </TASK>
+[   23.909835] Kernel Offset: 0x12e00000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)
+[   23.912980] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000 ]---
+QEMU: Terminated
+
